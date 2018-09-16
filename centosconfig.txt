@@ -20,7 +20,7 @@ yum install libgonme*
 yum install ntfs-3g
 yum install cmake3 cmake
 yum install gsl
-
+yum install texlive*
 
 ##install ROOT
 yum list ROOT*
