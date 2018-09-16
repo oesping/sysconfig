@@ -1,0 +1,115 @@
+
+
+##install repo
+yum install centos-release-scl
+yum install epel-release
+
+##
+yum install gvim
+yum install gcc
+yum install python ipython python-dev*
+yum install Cython*
+
+yum list gtk*
+yum list gtk-devel
+yum list gtk2-devel
+yum install gtk2-devel
+yum install gtk3-devel
+yum install -y dconf-editor gnome-shell-browser-plugin alacarte gnome-tweak-tool
+yum install libgonme*
+yum install ntfs-3g
+yum install cmake3 cmake
+yum install gsl
+
+
+##install ROOT
+yum list ROOT*
+yum install root*
+
+##install QT
+yum install qt5* qt4*
+yum install python-qt4
+yum install python-qt5
+yum install python-qt5*
+yum install PyQt5*
+yum groupinstall 'Development Tools'
+yum install freeglut*
+
+
+##compile pyqt5
+wget https://sourceforge.net/projects/pyqt/files/sip/sip-4.19/sip-4.19.12.tar.gz
+tar -zxvf sip-4.19.12.tar.gz
+cd sip-4.19.12
+python configure.py 
+make
+make install
+cd ..
+ls
+wget https://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-5.9.2/PyQt5_gpl-5.9.2.tar.gz
+ls
+tar -zxvf PyQt5_gpl-5.9.2.tar.gz 
+ls
+cd PyQt5_gpl-5.9.2/
+ls
+python config
+python configure.py --sip=/usr/bin/sip --
+python configure.py --qmake /usr/lib64/qt5/bin/qmake
+make
+make install
+
+
+
+##wps
+rpm -ivh wps-office-10.1.0.6757-1.x86_64.rpm 
+
+###dropbox
+tar xjf ./nautilus-dropbox-1.6.2.tar.bz2
+cd nautilus-dropbox-1.6.2/
+yum install libnautilus
+yum install nautilus-devel
+yum install docutils
+./configure 
+make
+make install
+
+
+###python env
+yum install git
+yum install python-pip
+pip install pandas
+pip install sunpy==0.8
+pip install mayavi
+pip install qtawesome
+
+
+yum install dnf
+yum install dnf*
+yum install centos-release-yum4
+yum install yum4
+yum4 install dnf-plugins-core
+
+yum install texworks
+yum clean
+yum clean all
+
+
+
+
+
+
+##geant4
+yum install xerces-c-devel
+yum install qt4-devel*
+yum install libXmu-devel
+yum install libX11-devel
+yum install motif-devel
+yum install gsl-devel
+
+chmod +x g4install.sh
+./g4install.sh 
+
+
+##gcc higher version
+yum install devtoolset-7-gcc*
+
+history -w /home/ping/centos_history.txt
