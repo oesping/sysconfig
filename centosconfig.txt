@@ -80,7 +80,7 @@ pip install pandas
 pip install sunpy==0.8
 pip install mayavi
 pip install qtawesome
-
+pip install wget
 
 yum install dnf
 yum install dnf*
